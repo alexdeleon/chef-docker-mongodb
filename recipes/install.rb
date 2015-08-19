@@ -33,7 +33,11 @@ docker_container 'mongod' do
   image "#{node["mongodb"]["docker_image"]}:#{node["mongodb"]["docker_image_tag"]}"
   container_name node["mongodb"]["docker_container"]
   entrypoint 'mongod'
-  command '--dbpath /data'
+	if(node["mongodb"]["smallfiles"]) then
+  	command '--dbpath /data --smallfiles'
+	else
+		command '--dbpath /data'
+	end
   detach true
   port '27017:27017'
   volume ["#{node["mongodb"]["data_path"]}:/data"]
