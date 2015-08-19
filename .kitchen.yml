@@ -16,3 +16,5 @@ suites:
       - recipe[docker-mongodb::default]
       - recipe[docker-mongodb::install]
     attributes:
+      mongodb:
+        smallfiles: true

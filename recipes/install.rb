@@ -34,7 +34,7 @@ docker_container 'mongod' do
   container_name node["mongodb"]["docker_container"]
   entrypoint 'mongod'
 	if(node["mongodb"]["smallfiles"]) then
-  	command '--dbpath /data --smallfiles'
+		command '--dbpath /data --smallfiles'
 	else
 		command '--dbpath /data'
 	end
