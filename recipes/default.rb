@@ -23,9 +23,11 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
+docker_service 'default' do
+  action [:create, :start]
+end
 
 docker_image node["mongodb"]["docker_image"] do
   tag node["mongodb"]["docker_image_tag"]
-  cmd_timeout 600
   action :pull
 end

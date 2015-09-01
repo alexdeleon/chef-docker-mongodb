@@ -1,4 +1,4 @@
 source "https://supermarket.getchef.com"
 
 metadata
-cookbook 'docker', '~> 0.35.2'
+cookbook 'docker', '~> 1.0.12'

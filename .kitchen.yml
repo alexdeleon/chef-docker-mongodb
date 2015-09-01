@@ -12,7 +12,6 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[docker]
       - recipe[docker-mongodb::default]
       - recipe[docker-mongodb::install]
     attributes:
