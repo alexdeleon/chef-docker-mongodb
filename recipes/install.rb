@@ -41,5 +41,5 @@ docker_container 'mongod' do
 	end
   detach true
   port '27017:27017'
-  volumes ["#{node["mongodb"]["data_path"]}:/data"]
+  binds ["#{node["mongodb"]["data_path"]}:/data"]
 end

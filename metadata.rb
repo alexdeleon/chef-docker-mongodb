@@ -1,9 +1,9 @@
 name             'docker-mongodb'
-maintainer       'Daniel Ku'
-maintainer_email 'kjunine@gmail.com'
+maintainer       'Alexander De Leon'
+maintainer_email 'alex@devialab.com'
 license          'MIT'
 description      'Installs/Configures docker-mongodb'
 long_description 'Installs/Configures docker-mongodb'
-version          '0.5.0'
+version          '0.5.1'
 
 depends 'docker'
